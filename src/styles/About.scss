@@ -1,0 +1,16 @@
+$backgroundImage:url("/background/leaves1.jpg");
+$color:aqua;
+$text-shadow: 0 0 5px $color, 0 0 15px $color, 0 0 20px $color;
+
+.MainContainer2{
+    background-image: $backgroundImage;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    .Article{
+        background-image: $backgroundImage;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:90vw;
+    }
+}

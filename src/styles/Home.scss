@@ -1,0 +1,293 @@
+$backgroundImage:url("/background/leaves1.jpg");
+$color:aqua;
+$color2:magenta;
+$color3:yellow;
+$text-shadow: 0 0 5px $color, 0 0 15px $color, 0 0 20px $color;
+$text-shadow2: 0 0 5px $color2, 0 0 15px $color2, 0 0 20px $color2;
+$text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
+.FiguresBody{
+    display:flex;
+    padding-top:20vh;
+    height: 80vh;
+    background-image: $backgroundImage;
+    background-repeat: no-repeat;
+    background-size: cover;
+    & .Title{
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        width:30;
+        display:flex;
+        font-size: 3.4vh;
+        justify-content: center;
+        flex-direction: column;
+        padding-left:35vw;
+        padding-right:35vw;
+        padding-bottom:25vh;
+        
+        position: relative;
+        & .header{
+            display:flex;
+            flex-direction: column;
+            color:white;
+            margin:0;
+            justify-content: center;
+            text-align: center;
+            & p{
+                margin:0;
+                display:flex;
+                flex-direction: column;
+            }
+            & .hi{
+                text-shadow: $text-shadow;
+            }
+            & .Name{
+                text-shadow: $text-shadow2;
+            }
+        }
+        & .description{
+            display:flex;
+            color:white;
+            margin:0;
+            text-align: center;
+            text-shadow: $text-shadow3;
+        }
+    }
+}
+
+$ellipse1:30vw;
+$circle1:8px;
+
+$ellipse2:35vw;
+$circle2:8px;
+
+$ellipse3:40vw;
+$circle3:8px;
+
+$ellipse4:45vw;
+$circle4:8px;
+
+
+
+@mixin style-ellipse($mod) {
+    width: $mod * 2;
+    height: $mod * 2;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+
+@mixin style-circle($mod) {
+    width: $mod * 6;
+    height: $mod * 6;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.ellipse1 {
+    @include style-ellipse($ellipse1);
+    border: 2px #555 solid;
+    transform-style: preserve-3d;
+    transform: rotateZ(2*2*22deg) rotateY(70deg);
+    .circle1 {
+        @include style-circle($circle1);
+        animation: move1 linear infinite;
+        animation-duration: 6 + s;
+    }
+}
+
+.ellipse2 {
+    @include style-ellipse($ellipse2);
+    border: 2px #555 solid;
+    transform-style: preserve-3d;
+    transform: rotateZ(2*2*22deg) rotateY(70deg);
+    .circle2 {
+        @include style-circle($circle2);
+        animation: move2 linear infinite;
+        animation-duration: 12 + s;
+    }
+}
+
+.ellipse3 {
+    @include style-ellipse($ellipse3);
+    border: 2px #555 solid;
+    transform-style: preserve-3d;
+    transform: rotateZ(2*2*22deg) rotateY(70deg);
+    .circle3 {
+        @include style-circle($circle3);
+        animation: move3 linear infinite;
+        animation-duration: 18 + s;
+    }
+}
+
+.ellipse4 {
+    @include style-ellipse($ellipse4);
+    border: 2px #555 solid;
+    transform-style: preserve-3d;
+    transform: rotateZ(2*2*22deg) rotateY(70deg);
+    .circle4 {
+        @include style-circle($circle4);
+        animation: move4 linear infinite;
+        animation-duration: 24 + s;
+    }
+    .circle5 {
+        @include style-circle($circle4);
+        animation: move5 linear infinite;
+        animation-duration: 34 + s;
+    }
+}
+
+@keyframes move1 {
+    from {
+        transform: rotateZ(0) translateX($ellipse1) rotateZ(0) rotateY(-70deg);
+    }
+    to {
+        transform: rotateZ(360deg) translateX($ellipse1) rotateZ(-360deg) rotateY(-70deg);
+    }
+}
+
+
+@keyframes move2 {
+    from {
+        transform: rotateZ(0) translateX($ellipse2) rotateZ(0) rotateY(-70deg);
+    }
+    to {
+        transform: rotateZ(360deg) translateX($ellipse2) rotateZ(-360deg) rotateY(-70deg);
+    }
+}
+
+
+@keyframes move3 {
+    from {
+        transform: rotateZ(0) translateX($ellipse3) rotateZ(0) rotateY(-70deg);
+    }
+    to {
+        transform: rotateZ(360deg) translateX($ellipse3) rotateZ(-360deg) rotateY(-70deg);
+    }
+}
+
+
+@keyframes move4 {
+    from {
+        transform: rotateZ(0) translateX($ellipse4) rotateZ(0) rotateY(-70deg);
+    }
+    to {
+        transform: rotateZ(360deg) translateX($ellipse4) rotateZ(-360deg) rotateY(-70deg);
+    }
+}
+
+@keyframes move5 {
+    from {
+        transform: rotateZ(0) translateX($ellipse4) rotateZ(0) rotateY(-70deg);
+    }
+    to {
+        transform: rotateZ(360deg) translateX($ellipse4) rotateZ(-360deg) rotateY(-70deg);
+    }
+}
+
+
+
+@media screen and (max-width:700px){
+    .FiguresBody{
+        .Title{
+            font-size: 2vh;
+        }
+    }
+    .ellipse1 {
+        transform: rotateZ(2*2*18deg) rotateY(70deg);  
+    }
+    .ellipse2 {
+        transform: rotateZ(2*2*18deg) rotateY(70deg);  
+    }
+    .ellipse3 {
+        transform: rotateZ(2*2*18deg) rotateY(70deg);  
+    }
+    .ellipse4 {
+        transform: rotateZ(2*2*18deg) rotateY(70deg);  
+    }
+    
+}
+
+
+// After Mobile View
+
+@media screen and (max-width:450px){
+    .FiguresBody{
+        .Title{
+            font-size: 1.4vh;
+        }
+    }
+
+.ellipse1 {
+    transform: rotateZ(2*2*4deg) rotateY(30deg);
+}
+.ellipse2 {
+    transform: rotateZ(2*2*4deg) rotateY(30deg);
+}
+.ellipse3 {
+    transform: rotateZ(2*2*4deg) rotateY(30deg);
+}
+.ellipse4 {
+    transform: rotateZ(2*2*4deg) rotateY(30deg);
+}
+
+}
+
+@media screen and (max-width:400px) and (min-height:500px) {
+    $ellipse1:35vw;
+    $ellipse2:40vw;
+    $ellipse3:45vw;
+    $ellipse4:50vw;
+
+    @mixin style-ellipse($mod) {
+        width: $mod * 2;
+        height: $mod * 2;
+    }
+
+    @mixin style-circle($mod) {
+        width: $mod * 4;
+        height: $mod * 4;
+    }
+   
+    .ellipse1 {
+        transform: rotateZ(2*2*6deg) rotateY(30deg);
+        @include style-ellipse($ellipse1);
+        .circle1{
+            @include style-circle($circle1);
+        }
+    }
+    .ellipse2 {
+        transform: rotateZ(2*2*6deg) rotateY(30deg);
+        @include style-ellipse($ellipse2);
+        .circle2{
+            @include style-circle($circle2);
+        }
+    }
+    .ellipse3 {
+        transform: rotateZ(2*2*6deg) rotateY(30deg);
+        @include style-ellipse($ellipse3);
+        .circle3{
+            @include style-circle($circle3);
+        }
+    }
+    .ellipse4 {
+        transform: rotateZ(2*2*6deg) rotateY(30deg);
+        @include style-ellipse($ellipse4);
+        .circle4{
+            @include style-circle($circle4);
+        }
+        .circle5{
+            @include style-circle($circle4);
+        }
+    }
+    
+}

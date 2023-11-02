@@ -5,6 +5,10 @@ const Home =()=>{
 
     return(
         <div className='FiguresBody'>
+           <div className='Title'>
+               <p className='Header'>Hi i'm Aditya Prajapati </p>
+               <p className="description">I develop Web Applications and Mobile Applications</p>
+          </div>
            <div className="ellipse1">
                 <img className="circle1" src="/icons/coding.png" alt="1" />
            </div>
@@ -18,10 +22,6 @@ const Home =()=>{
                 <img className="circle4" src="/icons/structure.png" alt="5" />
                 <img className="circle5" src="/icons/git.png" alt="7" />
            </div>
-          <div className='Title'>
-               <h3 className="header"><p className="hi">Hi&nbsp;&nbsp;i am</p><p className='Name'>&nbsp;&nbsp;Aditya Prajapati &nbsp;&nbsp;</p></h3>
-              <p className="description">I develop Web Applications and Mobile Applications</p>
-          </div>
         </div>
     );
 }

@@ -5,6 +5,7 @@ $color3:yellow;
 $text-shadow: 0 0 5px $color, 0 0 15px $color, 0 0 20px $color;
 $text-shadow2: 0 0 5px $color2, 0 0 15px $color2, 0 0 20px $color2;
 $text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
+
 .FiguresBody{
     display:flex;
     padding-top:20vh;
@@ -12,49 +13,64 @@ $text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
     background-image: $backgroundImage;
     background-repeat: no-repeat;
     background-size: cover;
-    & .Title{
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
-        width:30;
+    justify-content: center;
+    padding-top: 40vh;
+}
+.Title{
+    display: flex;
+    color: aliceblue;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width:auto;
+    
+    & .Header{
         display:flex;
-        font-size: 3.4vh;
-        justify-content: center;
-        flex-direction: column;
-        padding-left:35vw;
-        padding-right:35vw;
-        padding-bottom:25vh;
-        
-        position: relative;
-        & .header{
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: 400;
+        margin:0;
+        color: aliceblue;
+        text-shadow: $text-shadow3;
+    }
+    & .description{
+        margin:0;
+        display: flex;
+        text-align: center;
+        text-shadow: $text-shadow;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:900px){
+    .Title{
+        & .Header{
             display:flex;
             flex-direction: column;
-            color:white;
-            margin:0;
-            justify-content: center;
-            text-align: center;
-            & p{
-                margin:0;
-                display:flex;
-                flex-direction: column;
-            }
-            & .hi{
-                text-shadow: $text-shadow;
-            }
-            & .Name{
-                text-shadow: $text-shadow2;
-            }
+            font-size: 1rem;
         }
-        & .description{
-            display:flex;
-            color:white;
-            margin:0;
-            text-align: center;
-            text-shadow: $text-shadow3;
+        .description{
+            font-size: 0.8rem;
         }
     }
 }
+@media screen and (max-width:500px),(max-height:500px){
+    .FiguresBody{
+        padding-top: 45vh;
+        height:40vh;
+    }
+    .Title{
+        & .Header{
+            padding-top: 1rem;
+            display:flex;
+            flex-direction: column;
+            font-size: 1.1rem;
+        }
+        .description{
+            font-size: 0.5rem;
+        }
+    }
+}
+
 
 $ellipse1:30vw;
 $circle1:8px;
@@ -68,8 +84,6 @@ $circle3:8px;
 $ellipse4:45vw;
 $circle4:8px;
 
-
-
 @mixin style-ellipse($mod) {
     width: $mod * 2;
     height: $mod * 2;
@@ -80,6 +94,7 @@ $circle4:8px;
     bottom: 0;
     margin: auto;
     position: absolute;
+   
 }
 
 @mixin style-circle($mod) {
@@ -91,6 +106,7 @@ $circle4:8px;
     bottom: 0;
     margin: auto;
     position: absolute;
+    
 }
 
 .ellipse1 {

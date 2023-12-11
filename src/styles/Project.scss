@@ -1,0 +1,40 @@
+$color3:yellow;
+$text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
+
+.MainContainerProject{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    position: relative;
+    & div{
+        & .MainHeader{
+            color:aliceblue;
+            text-shadow: $text-shadow3;
+            font-size:3rem;
+            text-align: right;
+        }
+    }
+    & .units{
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:800px),(max-width:1400px){
+    .MainContainerProject{
+        padding-left: 13vw;
+        padding-right: 13vw;
+        position: relative;
+        & div{
+            & .MainHeader{
+                color:aliceblue;
+                text-shadow: $text-shadow3;
+                font-size:2rem;
+                text-align: right;
+            }
+        }
+        & .units{
+            display:flex;
+            flex-direction: column-reverse;
+        }
+    } 
+}

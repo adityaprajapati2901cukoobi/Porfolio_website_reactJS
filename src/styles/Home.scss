@@ -1,21 +1,23 @@
+
+//Global Variables
 $backgroundImage:url("/background/leaves1.jpg");
 $color:aqua;
 $color2:magenta;
-$color3:yellow;
+$color3:rgb(186, 186, 69);
+$color4:rgb(243, 243, 235);
 $text-shadow: 0 0 5px $color, 0 0 15px $color, 0 0 20px $color;
 $text-shadow2: 0 0 5px $color2, 0 0 15px $color2, 0 0 20px $color2;
 $text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
+$text-shadow4:0 0 5px $color4;
 
 .FiguresBody{
     display:flex;
     padding-top:20vh;
-    height: 80vh;
-    background-image: $backgroundImage;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 60vh;
     justify-content: center;
     padding-top: 40vh;
 }
+
 .Title{
     display: flex;
     color: aliceblue;
@@ -41,6 +43,7 @@ $text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
         font-size: 1.5rem;
     }
 }
+
 @media screen and (max-width:900px){
     .Title{
         & .Header{
@@ -53,6 +56,7 @@ $text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
         }
     }
 }
+
 @media screen and (max-width:500px),(max-height:500px){
     .FiguresBody{
         padding-top: 45vh;
@@ -71,6 +75,7 @@ $text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
     }
 }
 
+//Semi-global Variables
 
 $ellipse1:30vw;
 $circle1:8px;
@@ -111,7 +116,7 @@ $circle4:8px;
 
 .ellipse1 {
     @include style-ellipse($ellipse1);
-    border: 2px #555 solid;
+    box-shadow: $text-shadow4;
     transform-style: preserve-3d;
     transform: rotateZ(2*2*22deg) rotateY(70deg);
     .circle1 {
@@ -123,7 +128,7 @@ $circle4:8px;
 
 .ellipse2 {
     @include style-ellipse($ellipse2);
-    border: 2px #555 solid;
+    box-shadow: $text-shadow4;
     transform-style: preserve-3d;
     transform: rotateZ(2*2*22deg) rotateY(70deg);
     .circle2 {
@@ -135,7 +140,7 @@ $circle4:8px;
 
 .ellipse3 {
     @include style-ellipse($ellipse3);
-    border: 2px #555 solid;
+    box-shadow: $text-shadow4;
     transform-style: preserve-3d;
     transform: rotateZ(2*2*22deg) rotateY(70deg);
     .circle3 {
@@ -147,7 +152,7 @@ $circle4:8px;
 
 .ellipse4 {
     @include style-ellipse($ellipse4);
-    border: 2px #555 solid;
+    box-shadow: $text-shadow4;
     transform-style: preserve-3d;
     transform: rotateZ(2*2*22deg) rotateY(70deg);
     .circle4 {
@@ -162,6 +167,7 @@ $circle4:8px;
     }
 }
 
+// Animations
 @keyframes move1 {
     from {
         transform: rotateZ(0) translateX($ellipse1) rotateZ(0) rotateY(-70deg);
@@ -170,7 +176,6 @@ $circle4:8px;
         transform: rotateZ(360deg) translateX($ellipse1) rotateZ(-360deg) rotateY(-70deg);
     }
 }
-
 
 @keyframes move2 {
     from {
@@ -181,7 +186,6 @@ $circle4:8px;
     }
 }
 
-
 @keyframes move3 {
     from {
         transform: rotateZ(0) translateX($ellipse3) rotateZ(0) rotateY(-70deg);
@@ -190,7 +194,6 @@ $circle4:8px;
         transform: rotateZ(360deg) translateX($ellipse3) rotateZ(-360deg) rotateY(-70deg);
     }
 }
-
 
 @keyframes move4 {
     from {
@@ -210,8 +213,7 @@ $circle4:8px;
     }
 }
 
-
-
+// adjustments for ellipse
 @media screen and (max-width:700px){
     .FiguresBody{
         .Title{
@@ -233,9 +235,7 @@ $circle4:8px;
     
 }
 
-
 // After Mobile View
-
 @media screen and (max-width:450px){
     .FiguresBody{
         .Title{
@@ -259,6 +259,7 @@ $circle4:8px;
 }
 
 @media screen and (max-width:400px) and (min-height:500px) {
+    //Local variable
     $ellipse1:35vw;
     $ellipse2:40vw;
     $ellipse3:45vw;
@@ -307,3 +308,4 @@ $circle4:8px;
     }
     
 }
+

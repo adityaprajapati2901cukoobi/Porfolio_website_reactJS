@@ -1,11 +1,13 @@
 import React,{useState} from "react";
-import "../styles/Navbar.scss"
+import "../styles/componentscss/Navbar.scss";
+
 const Navbar=()=>{
     const [menu,setMenu]=useState(false);
    
     const dropMenu=()=>{
         setMenu(!menu)
     }
+    
     return(
         <nav>
             <div className="nav-section-1">

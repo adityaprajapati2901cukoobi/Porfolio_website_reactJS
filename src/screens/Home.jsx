@@ -1,11 +1,11 @@
-import React from 'react'
-import "../styles/Home.scss"
+import React from 'react';
+import "../styles/Home.scss";
 
 const Home =()=>{
 
     return(
         <div className='FiguresBody'>
-           <div className='Title'>
+          <div className='Title'>
                <p className='Header'>Hi i'm Aditya Prajapati </p>
                <p className="description">I develop Web Applications and Mobile Applications</p>
           </div>

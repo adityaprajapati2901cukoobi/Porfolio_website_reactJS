@@ -1,3 +1,5 @@
+
+//Global Variables
 $backgroundImage:url("/background/leaves1.jpg");
 $color:aqua;
 $color3:yellow;
@@ -5,15 +7,9 @@ $text-shadow: 0 0 5px $color,0 0 20px $color;
 $text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
 
 .MainContainer2{
-    background-image: $backgroundImage;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 94vh;
     padding-left: 10vw;
     padding-right: 10vw;
-    padding-bottom: 5vh;
     .Article{
-        padding-top: 5vh;
         display: flex;
         text-align: justify;
         color:aliceblue;
@@ -37,6 +33,7 @@ $text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
         justify-content: space-between;
     }
 }
+
 @media screen and (max-width:800px),(max-width:1000px){
     .MainContainer2{
         height: auto;
@@ -52,6 +49,7 @@ $text-shadow3: 0 0 5px $color3, 0 0 15px $color3, 0 0 20px $color3;
         }
     }
 }
+
 @media screen and (max-width:500px){
     .MainContainer2{
         .Article{

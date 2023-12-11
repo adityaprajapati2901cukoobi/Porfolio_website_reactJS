@@ -1,9 +1,12 @@
+
+// Global Variables
 $backgroundImage:url("/background/leaves1.jpg");
 $backgroundRepeat:no-repeat;
 $backgroundSize:cover;
 $color:aqua;
 $text-shadow: 0 0 5px $color, 0 0 20px $color;
 $color-white:aliceblue;
+
 nav{
     display:flex;
     flex-direction: row;
@@ -54,33 +57,7 @@ nav{
       }
     }
 }
-@-webkit-keyframes blink {
-    20%,24%,55% {
-      color: #111;
-      text-shadow: none;
-    }0%,19%,21%,23%,25%,54%,56%,100% {
-  
-    text-shadow:$text-shadow;
-      color: $color-white;
-    }
-  }
-  
-@keyframes blink {
-    20%,24%,55% {
-      color: #111;
-      text-shadow: none;
-    }0%,
-    19%,
-    21%,
-    23%,
-    25%,
-    54%,
-    56%,
-    100% {
-    text-shadow: $text-shadow;
-      color: $color-white;
-    }
-  }
+
   
 @media screen and (min-width:800px){
     .nav-section-3-hidden{
@@ -130,6 +107,7 @@ nav{
     }
   }
 }
+
 @media screen and (max-width:400px) {
   nav{
     .nav-section-1{
@@ -157,5 +135,35 @@ nav{
         }
       }
     }
+  }
+}
+
+// animations
+
+@keyframes blink {
+  20%,24%,55% {
+    color: #111;
+    text-shadow: none;
+  }0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+  text-shadow: $text-shadow;
+    color: $color-white;
+  }
+}
+
+@-webkit-keyframes blink {
+  20%,24%,55% {
+    color: #111;
+    text-shadow: none;
+  }0%,19%,21%,23%,25%,54%,56%,100% {
+
+  text-shadow:$text-shadow;
+    color: $color-white;
   }
 }

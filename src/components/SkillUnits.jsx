@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/SkillUnit.scss";
+import "../styles/componentscss/SkillUnit.scss";
 
 const SkillUnits = ({Icon,SkillName}) =>{
     return (

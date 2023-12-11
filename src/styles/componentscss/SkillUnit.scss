@@ -1,3 +1,5 @@
+
+//Global Variables
 $color:aqua;
 $shadow: 0 0 4px $color;
 
@@ -21,6 +23,7 @@ $shadow: 0 0 4px $color;
         text-shadow: $shadow;
     }
 }
+
 @media screen and (max-width:600px){
     .MainUnit{
         width:7rem;
@@ -31,7 +34,7 @@ $shadow: 0 0 4px $color;
         }
         & p{
             font-size: 0.8rem;
+            margin-left: 5px;
         }
     }
-
 }

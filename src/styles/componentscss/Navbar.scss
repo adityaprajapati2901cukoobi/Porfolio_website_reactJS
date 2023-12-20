@@ -43,7 +43,7 @@ nav{
             align-content: center;
             gap:1rem;
             font-size: 2.8vh;
-            & a{
+            & .a{
                 color:aliceblue;
                 text-decoration: none;
                 text-shadow: $text-shadow;
@@ -97,7 +97,7 @@ nav{
         gap:0.5rem;
         background-image:$backgroundImage;
         background:$backgroundRepeat $backgroundSize;
-        & a{
+        & .a{
           color:aliceblue;
           text-decoration: none;
           text-shadow: $text-shadow;
@@ -129,7 +129,7 @@ nav{
           top:8vh;
           right:0.6vw;
           padding:3vh;
-          & a{
+          & .a{
             font-size: 2vh;
           }
         }
